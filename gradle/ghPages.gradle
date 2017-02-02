@@ -19,8 +19,8 @@ apply plugin: "org.ajoberstar.github-pages"
 githubPages {
     repoUri = 'https://github.com/softcake/gradle-java-template.git'
     credentials {
-        username = project.ext.ghToken
-        password = ''
+        username = gitHubUser
+        password = gitHubPassWord
     }
 
     pages {
