@@ -587,6 +587,11 @@ The combined Jar is often referred to a <em>fat-jar</em> or <em>uber-jar</em>.
 Shadow utilizes <code>JarInputStream</code> and <code>JarOutputStream</code> to efficiently process dependent libraries
 into the output jar without incurring the I/O overhead of expanding the jars to disk.</p>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
+</div>
+</div>
 <div class="sect2">
 <h3 id="benefits_of_shadow">1.1. Benefits of Shadow</h3>
 <div class="paragraph">
@@ -827,7 +832,7 @@ file at: <code>build/libs/myApp-1.0-all.jar</code></p>
 <div class="listingblock">
 <div class="title">Output to <code>build/libs/shadow.jar</code></div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">10</span>-configuring.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/ShadowPluginSpec.groovy[tags=rename]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
 </div>
 </div>
 </div>
@@ -852,7 +857,7 @@ for the project.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">10</span>-configuring.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/ShadowPluginSpec.groovy[tags=shadowConfig]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -877,7 +882,7 @@ This means that any configuration performed on the <code>jar</code> task will pr
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">10</span>-configuring.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/ShadowPluginSpec.groovy[tags=jarManifest]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -927,7 +932,7 @@ of the dependencies to be merged.</p>
 <div class="listingblock">
 <div class="title">Exclude a file from Shadow Jar</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">11</span>-filtering-contents.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/FilteringSpec.groovy[tags=excludeFile]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -937,7 +942,7 @@ Additionally, ANT style patterns can be used to match multiple files.</p>
 <div class="listingblock">
 <div class="title">Configuring output using ANT patterns</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">11</span>-filtering-contents.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/FilteringSpec.groovy[tags=excludeOverInclude]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
 </div>
 </div>
 </div>
@@ -994,13 +999,13 @@ Gradle&#8217;s <code>configurations</code> block.</p>
 <div class="listingblock">
 <div class="title">Exclude an Module Dependency</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">12</span>-controlling-dependencies.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/FilteringSpec.groovy[tags=excludeDep]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Exclude a Project Dependency</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">12</span>-controlling-dependencies.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/FilteringSpec.groovy[tags=excludeProject]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1029,7 +1034,7 @@ using any of these individual fields.</p>
 <div class="listingblock">
 <div class="title">Exclude Any Version of a Dependency</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">12</span>-controlling-dependencies.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/FilteringSpec.groovy[tags=excludeDepWildcard]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">12</span>-controlling-dependencies.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>..<span class="regexp"><span class="delimiter">/</span><span class="content">gradle-java-template-core</span><span class="delimiter">/</span></span>src/test/java/org/softcake/one/FilteringSpec.groovy[tags=excludeDepWildcard]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1082,7 +1087,7 @@ method that accepts a <code>Closure</code> for selecting dependencies.</p>
 <div class="listingblock">
 <div class="title">Selecting Dependencies to Filter With a Spec</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">12</span>-controlling-dependencies.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/FilteringSpec.groovy[tags=excludeSpec]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">12</span>-controlling-dependencies.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>..<span class="regexp"><span class="delimiter">/</span><span class="content">gradle-java-template-core</span><span class="delimiter">/</span></span>src/test/java/org/softcake/one/FilteringSpec.groovy[tags=excludeSpec]</code></pre>
 </div>
 </div>
 </div>
@@ -1295,7 +1300,7 @@ Any non-class files that are stored within a package structure are also relocate
 <div class="listingblock">
 <div class="title">Relocating a Package</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">14</span>-<span class="keyword">package</span>-relocation.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/RelocationSpec.groovy[tags=relocate]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">14</span>-<span class="keyword">package</span>-relocation.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>..<span class="regexp"><span class="delimiter">/</span><span class="content">gradle-java-template-core</span><span class="delimiter">/</span></span>src/test/java/org/softcake/one/RelocationSpec.groovy[tags=relocate]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1344,7 +1349,7 @@ Be specific as possible when configuring relocation as to avoid unintended reloc
 <div class="listingblock">
 <div class="title">Configuring Filtering for Relocation</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">14</span>-<span class="keyword">package</span>-relocation.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>test/groovy/com/github/jengelman/gradle/plugins/shadow/RelocationSpec.groovy[tags=relocateFilter]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">Unresolved directive <span class="keyword">in</span> <span class="integer">14</span>-<span class="keyword">package</span>-relocation.adoc - <span class="key">include</span>::..<span class="regexp"><span class="delimiter">/</span><span class="content">..</span><span class="delimiter">/</span></span>..<span class="regexp"><span class="delimiter">/</span><span class="content">gradle-java-template-core</span><span class="delimiter">/</span></span>src/test/java/org/softcake/one/RelocationSpec.groovy[tags=relocateFilter]</code></pre>
 </div>
 </div>
 </div>
@@ -1992,7 +1997,7 @@ so Shadow was published there.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0-SNAPSHOT<br>
-Last updated 2017-02-02 13:01:56 +01:00
+Last updated 2017-02-02 15:36:01 +01:00
 </div>
 </div>
 <script>
