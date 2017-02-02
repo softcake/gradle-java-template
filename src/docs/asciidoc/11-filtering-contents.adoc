@@ -12,16 +12,16 @@ This means that, the configuration is applied to the individual files from both 
 of the dependencies to be merged.
 
 .Exclude a file from Shadow Jar
-[source,groovy,indent=0]
+[source,java,indent=0]
 ----
-include::{tests}/FilteringSpec.groovy[tags=excludeFile]
+include::{tests}/OneClassTest.java[tags=excludeFile]
 ----
 
 Excludes and includes can be combined just like a noraml `Jar` task, with `excludes` taking precendence over `includes`.
 Additionally, ANT style patterns can be used to match multiple files.
 
 .Configuring output using ANT patterns
-[source,groovy,indent=0]
+[source,java,indent=0]
 ----
-include::{tests}/FilteringSpec.groovy[tags=excludeOverInclude]
+include::{tests}/OneClassTest.java[tags=excludeOverInclude]
 ----

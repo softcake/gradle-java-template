@@ -35,15 +35,15 @@ The `dependency` blocks provides a number of methods for resolving dependencies 
 Gradle's `configurations` block.
 
 .Exclude an Module Dependency
-[source,groovy,indent=0]
+[source,java,indent=0]
 ----
-include::{tests}/FilteringSpec.groovy[tags=excludeDep]
+include::{tests}/OneClassTest.java[tags=excludeDep]
 ----
 
 .Exclude a Project Dependency
-[source,groovy,indent=0]
+[source,java,indent=0]
 ----
-include::{tests}/FilteringSpec.groovy[tags=excludeProject]
+include::{tests}/OneClassTest.java[tags=excludeProject]
 ----
 
 [NOTE]

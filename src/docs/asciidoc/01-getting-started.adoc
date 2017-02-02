@@ -17,6 +17,23 @@ apply plugin: 'java'
 
 Alternatively, the Gradle Plugin syntax can be used:
 
+.table
+|===
+|Header 1 |Header 2 |Header 3
+
+|Column 1, row 1
+|Column 2, row 1
+|Column 3, row 1
+
+|Column 1, row 2
+|Column 2, row 2
+|Column 3, row 2
+
+|Column 1, row 3
+|Column 2, row 3
+|Column 3, row 3
+|===
+
 [source,groovy,subs="+attributes"]
 ----
 plugins {

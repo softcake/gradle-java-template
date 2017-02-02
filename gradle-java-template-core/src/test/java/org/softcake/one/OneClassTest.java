@@ -15,14 +15,16 @@
  */
 
 package org.softcake.one;
-
+//tag::rename[]
 import static org.hamcrest.core.Is.is;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 /**
+ *
  * @author Rene Neubert.
+ *
  */
 public class OneClassTest {
 
@@ -31,6 +33,9 @@ public class OneClassTest {
 
         final One one = new One();
         Assert.assertThat(one.getName(), is("One"));
+
+
     }
 
 }
+//end::rename[]

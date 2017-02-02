@@ -1,5 +1,5 @@
-:src: ../
-:tests: {src}/test/groovy/com/github/jengelman/gradle/plugins/shadow
+:src: ../../../gradle-java-template-core/src
+:tests: ../../../gradle-java-template-core/src/test/java/org/softcake/one
 :api: api/com/github/jengelman/gradle/plugins/shadow
 :docinfo1:
 ifdef::env-github[]
@@ -16,6 +16,8 @@ include::00-intro.adoc[]
 
 include::10-configuring.adoc[]
 
+////
+
 include::20-custom-tasks.adoc[]
 
 include::30-application-plugin.adoc[]
@@ -29,3 +31,5 @@ include::60-shadowing-plugins.adoc[]
 include::90-changes.adoc[]
 
 include::99-about.adoc[]
+////
+

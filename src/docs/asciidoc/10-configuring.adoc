@@ -1,3 +1,5 @@
+
+
 == Configuring Shadow
 
 The link:{api}/tasks/ShadowJar.html[`ShadowJar`] task type extends from Gradle's
@@ -19,9 +21,9 @@ file at: `build/libs/myApp-1.0-all.jar`
 As with all `Jar` tasks in Gradle, these values can be overridden:
 
 .Output to `build/libs/shadow.jar`
-[source,groovy,indent=0]
+[source,java,indent=0]
 ----
-include::{tests}/ShadowPluginSpec.groovy[tags=rename]
+include::{tests}/OneClassTest.java[]
 ----
 
 === Configuring the Runtime Classpath
@@ -40,9 +42,9 @@ in the JAR manifest.
 The value of the `Class-Path` entry is the name of all dependencies resolved in the `shadow` configuration
 for the project.
 
-[source,groovy,indent=0]
+[source,java,indent=0]
 ----
-include::{tests}/ShadowPluginSpec.groovy[tags=shadowConfig]
+include::{tests}/OneClassTest.java[tags=shadowConfig]
 ----
 
 Inspecting the `META-INF/MANIFEST.MF` entry in the JAR file will reveal the following attribute:
@@ -60,9 +62,9 @@ Beyond the autmatic configuration of the `Class-Path` entry, the `shadowJar` man
 First, the manifest for the `shadowJar` task is configured to __inherit__ from the manifest of the standard `jar` task.
 This means that any configuration performed on the `jar` task will propagate to the `shadowJar` tasks.
 
-[source,groovy,indent=0]
+[source,java,indent=0]
 ----
-include::{tests}/ShadowPluginSpec.groovy[tags=jarManifest]
+include::{tests}/OneClassTest.java[tags=rename]
 ----
 
 Inspecting the `META-INF/MANIFEST.MF` entry in the JAR file will revel the following attribute:

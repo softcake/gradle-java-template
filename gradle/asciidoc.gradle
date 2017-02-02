@@ -27,18 +27,19 @@ asciidoctor {
     }
     backends = ['html5', 'pdf']
 
-    attributes  toc                 :'left',
+    attributes toc: 'left',
             'source-highlighter': 'coderay',
-            icons               : 'font',
-            numbered            : '',
-            idprefix            : '',
-            'docinfo1'          : 'true'
+            icons: 'font',
+            numbered: '',
+            idprefix: '',
+            'docinfo1': 'true'
     resources {
         from project.tasks.aggregateJavadocs {
             into 'api'
         }
     }
-    //inputs.files project.sourceSets.test.allSource
-}
+    inputs.files publishedModules.sourceSets.test.allSource
 
+
+}
 project.tasks.asciidoctor.dependsOn project.tasks.aggregateJavadocs
