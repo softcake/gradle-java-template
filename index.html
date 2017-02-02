@@ -589,7 +589,8 @@ into the output jar without incurring the I/O overhead of expanding the jars to 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">final</span> One one = <span class="keyword">new</span> One();
+Assert.assertThat(one.getName(), is(<span class="string"><span class="delimiter">&quot;</span><span class="content">One</span><span class="delimiter">&quot;</span></span>));</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -832,7 +833,8 @@ file at: <code>build/libs/myApp-1.0-all.jar</code></p>
 <div class="listingblock">
 <div class="title">Output to <code>build/libs/shadow.jar</code></div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">final</span> One one = <span class="keyword">new</span> One();
+Assert.assertThat(one.getName(), is(<span class="string"><span class="delimiter">&quot;</span><span class="content">One</span><span class="delimiter">&quot;</span></span>));</code></pre>
 </div>
 </div>
 </div>
