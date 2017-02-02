@@ -26,6 +26,11 @@ buildscript {
     apply from: "${rootDir}/gradle/dependencies.gradle"
     dependencies {
         classpath gradle_plugins.values()
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
+        classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.11'
+        classpath 'org.asciidoctor:asciidoctorj-groovy-dsl:1.0.0.preview2'
+        classpath "com.bluepapa32:gradle-watch-plugin:0.1.5"
+        classpath 'org.ajoberstar:gradle-git:1.5.0'
     }
 }
 
@@ -85,7 +90,9 @@ apply from: file('gradle/convention.gradle')
 apply from: file('gradle/compile.gradle')
 apply from: file('gradle/release.gradle')
 apply from: file('gradle/sonarqube.gradle')
-
+apply from: file('gradle/docs.gradle')
+apply from: file('gradle/asciidoc.gradle')
+apply from: file('gradle/ghPages.gradle')
 
 subprojects { project ->
 
