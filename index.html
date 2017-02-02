@@ -589,8 +589,28 @@ into the output jar without incurring the I/O overhead of expanding the jars to 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">final</span> One one = <span class="keyword">new</span> One();
-Assert.assertThat(one.getName(), is(<span class="string"><span class="delimiter">&quot;</span><span class="content">One</span><span class="delimiter">&quot;</span></span>));</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">import</span> <span class="include">static</span> <span class="include">org.hamcrest.core.Is.is</span>;
+
+<span class="keyword">import</span> <span class="include">org.junit.Assert</span>;
+<span class="keyword">import</span> <span class="include">org.junit.Test</span>;
+
+<span class="comment">/**
+ *
+ * @author Rene Neubert.
+ *
+ */</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">OneClassTest</span> {
+
+    <span class="annotation">@Test</span>
+    <span class="directive">public</span> <span class="type">void</span> getNameDefault() <span class="directive">throws</span> <span class="exception">Exception</span> {
+
+        <span class="directive">final</span> One one = <span class="keyword">new</span> One();
+        Assert.assertThat(one.getName(), is(<span class="string"><span class="delimiter">&quot;</span><span class="content">One</span><span class="delimiter">&quot;</span></span>));
+
+
+    }
+
+}</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -666,6 +686,38 @@ apply <span class="key">plugin</span>: <span class="string"><span class="delimit
 <div class="paragraph">
 <p>Alternatively, the Gradle Plugin syntax can be used:</p>
 </div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. table</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Header 1</th>
+<th class="tableblock halign-left valign-top">Header 2</th>
+<th class="tableblock halign-left valign-top">Header 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Column 1, row 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Column 2, row 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Column 3, row 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Column 1, row 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Column 2, row 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Column 3, row 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Column 1, row 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Column 2, row 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Column 3, row 3</p></td>
+</tr>
+</tbody>
+</table>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="groovy">plugins {
@@ -833,8 +885,47 @@ file at: <code>build/libs/myApp-1.0-all.jar</code></p>
 <div class="listingblock">
 <div class="title">Output to <code>build/libs/shadow.jar</code></div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">final</span> One one = <span class="keyword">new</span> One();
-Assert.assertThat(one.getName(), is(<span class="string"><span class="delimiter">&quot;</span><span class="content">One</span><span class="delimiter">&quot;</span></span>));</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/*
+ * Copyright 2017 softcake.org.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */</span>
+
+<span class="keyword">package</span> <span class="namespace">org.softcake.one</span>;
+<span class="comment">//tag::rename[]</span>
+<span class="keyword">import</span> <span class="include">static</span> <span class="include">org.hamcrest.core.Is.is</span>;
+
+<span class="keyword">import</span> <span class="include">org.junit.Assert</span>;
+<span class="keyword">import</span> <span class="include">org.junit.Test</span>;
+
+<span class="comment">/**
+ *
+ * @author Rene Neubert.
+ *
+ */</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">OneClassTest</span> {
+
+    <span class="annotation">@Test</span>
+    <span class="directive">public</span> <span class="type">void</span> getNameDefault() <span class="directive">throws</span> <span class="exception">Exception</span> {
+
+        <span class="directive">final</span> One one = <span class="keyword">new</span> One();
+        Assert.assertThat(one.getName(), is(<span class="string"><span class="delimiter">&quot;</span><span class="content">One</span><span class="delimiter">&quot;</span></span>));
+
+
+    }
+
+}
+<span class="comment">//end::rename[]</span></code></pre>
 </div>
 </div>
 </div>
@@ -884,7 +975,28 @@ This means that any configuration performed on the <code>jar</code> task will pr
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"></code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">import</span> <span class="include">static</span> <span class="include">org.hamcrest.core.Is.is</span>;
+
+<span class="keyword">import</span> <span class="include">org.junit.Assert</span>;
+<span class="keyword">import</span> <span class="include">org.junit.Test</span>;
+
+<span class="comment">/**
+ *
+ * @author Rene Neubert.
+ *
+ */</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">OneClassTest</span> {
+
+    <span class="annotation">@Test</span>
+    <span class="directive">public</span> <span class="type">void</span> getNameDefault() <span class="directive">throws</span> <span class="exception">Exception</span> {
+
+        <span class="directive">final</span> One one = <span class="keyword">new</span> One();
+        Assert.assertThat(one.getName(), is(<span class="string"><span class="delimiter">&quot;</span><span class="content">One</span><span class="delimiter">&quot;</span></span>));
+
+
+    }
+
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
